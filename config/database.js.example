@@ -1,0 +1,40 @@
+var database = {
+  development: {
+    username: 'example',
+    password: 'example',
+    database: 'hearteye_dev',
+    host: '127.0.0.1',
+    dialect: 'postgres',
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 10000
+    }
+  },
+  test: {
+    username: 'tester',
+    password: 'tester',
+    database: 'hearteye_test',
+    host: '127.0.0.1',
+    dialect: 'postgres',
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 10000
+    }
+  },
+  production: {
+    username: 'production',
+    password: 'production',
+    database: 'hearteye',
+    host: '',
+    dialect: 'postgres',
+    pool: {
+      max: 10,
+      min: 5,
+      idle: 30000
+    }
+  }
+};
+
+module.exports = database;
